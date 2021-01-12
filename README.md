@@ -1,3 +1,7 @@
+## Welcome to Langauge for 3D Scenes
+
+This is a temporary-work-in-progress webpage.
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/language3dscenes/language3dscenes/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
