@@ -1,0 +1,69 @@
+.CodeMirror {
+    font-size: .8em;
+    height: auto;
+}
+
+.CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+#header_img {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.list-inline {
+	list-style: none;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	padding-left: 0;
+}
+
+.list-inline > li {
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+/*.iframe-placeholder
+{
+   background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="%23DDDDDD" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">Loading</text></svg>') 0px 0px no-repeat;
+}*/
+
+/*SEE*/
+/*https://medium.com/@jamesfuthey/simulating-the-creation-of-website-thumbnail-screenshots-using-iframes-7145269891db*/
+
+.thumbnail iframe {
+  width: 1440px;
+  height: 900px;
+}
+
+.thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.thumbnail {
+  position: relative;
+  -ms-zoom: 0.50;
+  -moz-transform: scale(0.50);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.50);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.50);
+  -webkit-transform-origin: 0 0;
+}
+
+.thumbnail-container {
+  width: calc(1440px * 0.50);
+  height: calc(900px * 0.50);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
