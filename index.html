@@ -1,163 +1,389 @@
+
 <!DOCTYPE html>
 <html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="keywords" content="cvpr, workshop, computer vision, computer graphics, visual learning, machine learning">
 
-    <title>L3DS</title>
+  <link rel="shortcut icon" href="static/img/ico/favicon.png">
 
-    <meta name="description" content="L3DS, CVPR-workshop, language, 3D, scenes, ScanNet, referIt">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="img/artemis_head.jpg">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
-    <script src="js/app.js"></script>    
+  <title>ScanNet Indoor Scene Understanding Challenge</title>
+  <meta name="description" content="Website for the ScanNet Indoor Scene Understanding CVPR 2021 Workshop ---">
+
+  <!--Open Graph Related Stuff-->
+  <meta property="og:title" content="ScanNet Indoor Scene Understanding Challenge"/>
+  <meta property="og:url" content="http://www.scan-net.org/cvpr2019workshop"/>
+  <meta property="og:description" content="Website for the ScanNet Indoor Scene Understanding CVPR 2021 Workshop ---"/>
+  <meta property="og:site_name" content="ScanNet Indoor Scene Understanding Challenge"/>
+  <meta property="og:image" content=""/>
+  <meta property="og:image:url" content=""/>
+
+  <!--Twitter Card Stuff-->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="ScanNet Indoor Scene Understanding Challenge"/>
+  <meta name="twitter:image" content="http://www.scan-net.org/cvpr2019workshop/static/img/splash.jpg">
+  <meta name="twitter:url" content="http://www.scan-net.org/cvpr2019workshop"/>
+  <meta name="twitter:description" content="Website for the ScanNet Indoor Scene Understanding CVPR 2021 Workshop ---"/>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/main.css" media="screen,projection">
+
+  <script type="text/javascript" src="static/js/jquery.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 </head>
 
+  <body>
 
-
-<body>
-
-<div class="container" id="main">
-    <div class="row">
-
-        <h2 class="col-md-12 text-center" style="padding-bottom:20px">
-            <span style="font-size:35pt">
-                <b>L3DS: 1st Workshop on Language for 3D Scenes</b><br>
-                <span style="color:red">@CVPR-21</span>
-            </span>
-        </h2>
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"></a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
 
-
-    <!-- <div class="row" id="team">
-
-        <div class="col-md-12 text-center">
-            <ul class="list-inline" style="font-size:17pt;">
-                <li>
-                    <a href="http://ai.stanford.edu/~optas">
-                        Panos Achlioptas
-                    </a>
-                    <sup>1</sup>
-                </li>
-                <li>
-                    <a href="http://www.lix.polytechnique.fr/~maks">
-                        Maks Ovsjanikov
-                    </a>
-                    <sup>2</sup>
-                </li>
-                <li>
-                    <a href="https://kkhaydarov.com">
-                        Kilichbek Haydarov
-                    </a>
-                    <sup>3</sup>
-                </li>
-                <br>
-                <li>
-                    <a href="http://www.mohamed-elhoseiny.com/">
-                        Mohamed Elhoseiny
-                    </a>
-                    <sup>3,1</sup>
-                </li>
-                <li>
-                    <a href="https://geometry.stanford.edu/member/guibas">
-                        Leonidas Guibas
-                    </a>
-                    <sup>1</sup>
-                </li>
-            </ul>
-            <ul style="list-style-type:none;">
-                <li style="font-size: 14pt;">Stanford University  <sup>1</sup</li>
-                <li style="font-size: 14pt;">LIX, Ecole Polytechnique  <sup>2</sup</li>
-                <li style="font-size: 14pt;">King Abdullah University of Science and Technology (KAUST) <sup>3</sup> </li>
-            </ul>
-        </div>
-    </div> -->
-
-
- 
-    <!-- <div class="row" style="padding-top:45px">
-        <div class="col-md-8 col-md-offset-2 text-center">
-            <ul class="nav nav-pills nav-justified">
-                <li>
-                    <a href="https://arxiv.org/abs/2101.07396" class="imageLink">
-                        <img src="img/arxiv_paper.png"  width="60" height="80">
-                        <h4><strong>[Paper]</strong></h4>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#videos">
-                        <img src="img/video_.png"  width="80" height="80">
-                        <h4><strong>[Videos]</strong></h4>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#dataset">
-                        <img src="img/artemis_head.jpg" width="80" height="80">
-                        <h4><strong>[Dataset]</strong></h4>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#code">
-                        <img src="img/github.png" style="padding:10pt" width="80" height="80">
-                        <h4><strong>[Code]</strong></h4>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="materials/artemis_supplemental.pdf" class="imageLink">
-                        <img src="img/supplemental_image.png"  width="60" height="80">
-                        <h4><strong>[Supplemental Material]</strong></h4>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
- -->
-
-    <div class="row" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
-                <b>Abstract</b>
-            </h3>
-            <p class="text-justify">
-                This is the first workshop on natural language and 3D-oriented object understanding of real-world scenes. Our fundamental drive with this workshop is to spark research interest in this emerging area and we set two objectives to achieve this. First to bring together researchers interested in natural language and/or object representations of our physical world. Thus to foster a multidisciplinary and broad discussion on how humans use language to communicate about different aspects of objects present in their surrounding 3D environments. Our second objective is to benchmark progress in connecting language to 3D on the topic of identifying and localizing 3D objects via natural referential language. Tapping on the recently introduced large-scale datasets of <b>ScanRefer</b> and <b>ReferIt3D</b> we will host two large-scale benchmark challenges regarding language-assisted <i>3D localization</i> tasks. This workshop will consist of both presentations by experts in the field, and accompanying challenges designed to highlight the emerging open problems in this area.
-            </p>
-        </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#dates">Important Dates</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#speakers">Invited Speakers</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+      </ul>
     </div>
 
-
-    <div class="row" id="contact" style="padding-bottom:30px">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>
-                <b>Contact</b>
-            </h3>
-            To contact the organizers please use <b>language3dscenes@gmail.com</b>
-        </div>
-    </div>
-
-    <div class="row" style="padding-top:40px">
-        <div class="col-md-6 col-md-offset-3">
-            <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=tt&d=XQpOjTqZucyoQ1jNEHXktV3AEOE99ALiZokmI45-RKQ&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353">                
-            </script>
-        </div>
-    </div>
-
-
+  </div>
 </div>
-</body>
 
+
+    <div class="container">
+      <div class="page-content">
+          <p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <center><h1>3rd ScanNet Indoor Scene Understanding Challenge</h1></center>
+    <center><h2>CVPR 2021 Workshop</h2></center>
+    <center>June 19, 2021</center>
+  </div>
+</div>
+
+<hr />
+
+<!-- <br>
+  <center>
+  <h1 style="color:blue"><a href="https://youtu.be/S7wm806JQ1M">Join Us Here: Live Stream</a></h1>
+  </center>
+<br> -->
+
+<div class="row" id="intro">
+  <div class="col-md-12">
+    <img src="/cvpr2021workshop/static/img/splash.jpg" />
+  </div>
+</div>
+
+<p><br /></p>
+<div class="row" id="cfp">
+  <div class="col-xs-12">
+    <h2>Introduction</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      3D scene understanding for indoor environments is becoming an increasingly important area.
+      Application domains such as augmented and virtual reality, computational photography, interior design, and autonomous mobile robots all require a deep understanding of 3D interior spaces, the semantics of objects that are present, and their relative configurations in 3D space.
+    </p>
+    <p>
+      We present the first comprehensive challenge for 3D scene understanding of entire rooms at the object instance-level with 5 tasks based on the ScanNet dataset.
+      The ScanNet dataset is a large-scale semantically annotated dataset of 3D mesh reconstructions of interior spaces (approx. 1500 rooms and 2.5 million RGB-D frames).
+      It is used by more than 480 research groups to develop and benchmark state-of-the-art approaches in semantic scene understanding.
+      A key goal of this challenge is to compare state-of-the-art approaches operating on image data (including RGB-D) with approaches operating directly on 3D data (point cloud, or surface mesh representations).
+      Additionally, we pose both object category label prediction (commonly referred to as semantic segmentation), and instance-level object recognition (object instance prediction and category label prediction).
+      We propose five tasks that cover this space:
+    </p>
+    <ul>
+      <li>
+        <strong>2D semantic label prediction</strong>: prediction of object category labels from 2D image representation
+      </li>
+      <li>
+        <strong>2D semantic instance prediction</strong>: prediction of object instance and category labels from 2D image representation
+      </li>
+      <li>
+        <strong>3D semantic label prediction</strong>: prediction of object category labels from 3D representation
+      </li>
+      <li>
+        <strong>3D semantic instance prediction</strong>: prediction of object instance and category labels from 3D representation
+      </li>
+      <li>
+        <strong>Scene type classification</strong>: classification of entire 3D room into a scene type
+      </li>
+    </ul>
+      <h3 style="color:orange;font-weight:800">New This Year - Data Efficient Challenge!</h3>
+    <p>In the data efficient challenge, training is conducted on  Limited Scene Reconstructions (LR) or Limited Scene Annotations (LA), for the tasks of 3D Semantic Segmentation, Instance Segmentation and Object Detection. 
+    </p>
+    <p>
+      For each task, challenge participants are provided with prepared training, validation, and test datasets, and automated evaluation scripts.
+      In addition to the public train-val-test split, benchmarking is done on a hidden test set whose raw data can be downloaded without annotations; in order to participate in the benchmark, the predictions on the hidden test set are uploaded to the evaluation server, where they are evaluated.
+      Submission is restricted to submissions every two weeks to avoid finetuning on the test dataset.
+      See more details at <a href="http://kaldir.vc.in.tum.de/scannet_benchmark/documentation">http://kaldir.vc.in.tum.de/scannet_benchmark/documentation</a> if you would like to participate in the challenge.
+      The evaluation server leaderboard is live at <a href="http://kaldir.vc.in.tum.de/scannet_benchmark/">http://kaldir.vc.in.tum.de/scannet_benchmark/</a>.
+      See the new data efficient <a href="http://kaldir.vc.in.tum.de/scannet_benchmark/data_efficient/documentation">documentation</a> and <a href="http://kaldir.vc.in.tum.de/scannet_benchmark/data_efficient">leaderboard</a>!.
+    </p>
+  </div>
+</div>
+<p><br /></p>
+
+<div class="row" id="tasks">
+  <div class="col-md-6 text-center">
+    <img src="/cvpr2021workshop/static/img/semantic_label_2d.jpg" />
+    <p>2D semantic label prediction</p>
+  </div>
+  <div class="col-md-6 text-center">
+    <img src="/cvpr2021workshop/static/img/semantic_instance_2d.jpg" />
+    <p>2D semantic instance prediction</p>
+  </div>
+  <div class="col-md-6 text-center">
+    <img src="/cvpr2021workshop/static/img/semantic_label_3d.jpg" />
+    <p>3D semantic label prediction</p>
+  </div>
+  <div class="col-md-6 text-center">
+    <img src="/cvpr2021workshop/static/img/semantic_instance_3d.jpg" />
+    <p>3D semantic instance prediction</p>
+  </div>
+  <!-- <div class="col-md-4">
+    <p>&nbsp;</p>
+  </div> -->
+  <!-- <div class="col-md-4">
+    <img src="/cvpr2021workshop/static/img/scene_type_classification.jpg">
+    <p>Scene type classification</p>
+  </div> -->
+</div>
+
+<div class="row" id="schedule">
+  <div class="col-xs-12">
+    <h2>Important Dates</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <tbody>
+        <tr><td>TBD</td><td>TBD</td></tr>
+        <!-- <tr>
+          <td>Poster Submission Deadline</td>
+          <td>May 20 2020</td>
+        </tr>
+        <tr>
+          <td>Notification to Authors</td>
+          <td>May 25 2020</td>
+        </tr>
+        <tr>
+          <td>Workshop Date</td>
+          <td>June 19 2020</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+</div>
+<p><br /></p>
+
+<div class="row" id="cfp">
+  <div class="col-xs-12">
+    <h2>Posters</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      To submit a poster to the workshop, please email the poster as .pdf file to scannet@googlegroups.com.
+    </p>
+  </div>
+</div>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Schedule</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+     <table class="table table-striped">
+      <tbody>
+        <tr><td>TBD</td><td>TBD</td></tr>
+        <!-- <tr>
+          <td>Welcome and Introduction</td>
+          <td>1:50pm - 2:00pm</td>
+        </tr>
+        <tr>
+          <td>Implicit Neural Representations: From Objects to 3D Scenes (Andreas Geiger)</td>
+          <td>2:00pm - 2:30pm</td>
+        </tr>
+        <tr>
+          <td>Winner Talk: KPConv (Hugues Thomas) </td>
+          <td>2:30pm - 2:40pm</td>
+        </tr>
+        <tr>
+          <td>Winner Talk: SparseConvNet (Benjamin Graham) </td>
+          <td>2:40pm - 2:50pm</td>
+        </tr>
+        <tr>
+          <td>Winner Talk: PointGroup (Li Jiang) </td>
+          <td>2:50pm - 3:00pm</td>
+        </tr>
+        <tr>
+          <td>Break </td>
+          <td>3:00pm - 3:15pm</td>
+        </tr>
+        <tr>
+          <td>Winner Talk: Sparse 3D Perception (Chris Choy) </td>
+          <td>3:15pm - 3:25pm</td>
+        </tr>
+        <tr>
+          <td>Winner Talk: 3D-MPA (Francis Engelmann) </td>
+          <td>3:25pm - 3:35pm</td>
+        </tr>
+        <tr>
+          <td>Winner Talk: OccuSeg (Tian Zheng) </td>
+          <td>3:35pm - 3:45pm</td>
+        </tr>
+        <tr>
+          <td>Break </td>
+          <td>3:45pm - 4:00pm</td>
+        </tr>
+        <tr>
+          <td>CVPR is a Contemporary Art Exhibition (Yasutaka Furukawa)</td>
+          <td>4:00pm - 4:30pm</td>
+        </tr>
+        <tr>
+          <td>Semantic Scene Reconstruction from RGBD Scans (Thomas Funkhouser)</td>
+          <td>4:30pm - 5:00pm</td>
+        </tr>
+        <tr>
+          <td>Panel Discussion and Conclusion</td>
+          <td>5:00pm - 5:30pm</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Invited Speakers</h2>
+  </div>
+</div>
+<p><br /></p>
+
+<!-- <div class="row">
+  <div class="col-md-12">
+    <a href="http://www.cvlibs.net"><img class="people-pic" style="float:left;margin-right:50px;" src="/cvpr2021workshop/static/img/people/andreas_geiger.png"></a>
+    <p>
+      <b><a href="http://www.cvlibs.net">Andreas Geiger</a></b> is professor at the University of Tübingen and group leader at the Max Planck Institute for Intelligent Systems. Prior to this, he was a visiting professor at ETH Zürich and a research scientist at MPI-IS. He studied at KIT, EPFL and MIT and received his PhD degree in 2013 from the KIT. His research interests are at the intersection of 3D reconstruction, motion estimation, scene understanding and sensory-motor control. He maintains the KITTI vision benchmark.
+    </p>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col-md-12">
+    <a href="https://www.cs.sfu.ca/~furukawa/"><img class="people-pic" style="float:left;margin-right:50px;" src="/cvpr2021workshop/static/img/people/yasu_furukawa.png"></a>
+    <p>
+      <b><a href="https://www.cs.sfu.ca/~furukawa/">Yasutaka Furukawa</a></b> is an associate professor of Computing Science at Simon Fraser University. Prior to SFU, he was an assistant professor at Washington University in St. Louis. Before WUSTL, he was a software engineer at Google. Before Google, he was a post-doctoral research associate at University of Washington. He worked with Prof. Seitz and Prof. Curless at University of Washington, and Rick Szeliski at Facebook (was at Microsoft Research). He completed his Ph.D. under the supervision of Prof. Ponce at Computer Science Department of University of Illinois at Urbana-Champaign in May 2008.
+    </p>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col-md-12">
+    <a href="https://www.cs.princeton.edu/~funk/"><img class="people-pic" style="float:left;margin-right:50px;" src="/cvpr2021workshop/static/img/people/tom_funkhouser.png"></a>
+    <p>
+      <b><a href="https://www.cs.princeton.edu/~funk/">Thomas Funkhouser</a></b> is a senior research scientist at Google and the David
+M. Siegel Professor of Computer Science, Emeritus, at Princeton University.  He received a PhD in computer science from UC Berkeley in
+1993 and was a member of the technical staff at Bell Labs until 1997 before joining the faculty at Princeton.  For most of his career, he focused on research problems in computer graphics, including foundational work on 3D shape retrieval, analysis, and modeling.   His
+most recent research has focused on 3D scene understanding in computer vision. He has published more than 100 research papers and received several awards, including the ACM SIGGRAPH Computer Graphics Achievement Award, ACM SIGGRAPH Academy, ACM Fellow, NSF Career Award, Emerson Electric, E. Lawrence Keyes Faculty Advancement Award, Google Faculty Research Awards, University Council Excellence in Teaching Awards, and a Sloan Fellowship.
+    </p>
+  </div>
+</div><br> -->
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Organizers</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-2">
+    <a href="https://angeladai.github.io/">
+      <img class="people-pic" src="/cvpr2021workshop/static/img/people/angela.png" />
+    </a>
+    <div class="people-name">
+      <a href="https://angeladai.github.io/">Angela Dai</a>
+      <h6>Technical University of Munich</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://angelxuanchang.github.io/">
+      <img class="people-pic" src="/cvpr2021workshop/static/img/people/angel.png" />
+    </a>
+    <div class="people-name">
+      <a href="https://angelxuanchang.github.io/">Angel X. Chang</a>
+      <h6>Simon Fraser University</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://msavva.github.io/">
+      <img class="people-pic" src="/cvpr2021workshop/static/img/people/manolis.png" />
+    </a>
+    <div class="people-name">
+      <a href="https://msavva.github.io/">Manolis Savva</a>
+      <h6>Simon Fraser University</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">
+      <img class="people-pic" src="/cvpr2021workshop/static/img/people/matthias.png" />
+    </a>
+    <div class="people-name">
+      <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>
+      <h6>Technical University of Munich</h6>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Acknowledgments</h2>
+  </div>
+</div>
+<p><a name="/acknowledgements"></a></p>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      Thanks to <span style="color:#1a1aff;font-weight:400;"> <a href="https://visualdialog.org/">visualdialog.org</a></span> for the webpage format.
+    </p>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  </body>
 </html>
