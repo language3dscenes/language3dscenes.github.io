@@ -107,7 +107,7 @@
       First to bring together researchers interested in natural language and object representations of our physical world.
       Thus to foster a multidisciplinary and broad discussion on how humans use language to communicate about different aspects of objects present in their surrounding 3D environments. 
       Our second objective is to benchmark progress in connecting language to 3D on the topic of identifying and localizing 3D objects via natural referential language. 
-      Tapping on the recently introduced large-scale datasets of <b>ScanRefer</b> and <b>ReferIt3D</b> we host two large-scale benchmark challenges regarding language-assisted <i>3D localization</i> tasks.
+      Tapping on the recently introduced large-scale datasets of <b>ReferIt3D</b> and <b>ScanRefer</b> we host two large-scale benchmark challenges regarding language-assisted <i>3D identification and localization</i> tasks.
       This workshop consists of presentations by experts in the field, and accompanying challenges designed to highlight the emerging open problems in this area.
     </p>
   </div>
@@ -126,23 +126,24 @@
     </p>
     <ul>
       <li>
-        <strong>3D Object Localization</strong>: to predict a bounding box in a 3D scene corresponding to an object described in natural language
-      </li>
-      <li>
         <strong>Fine-grained 3D Object Identification</strong>: to identify a referred object among multiple objects in a 3D scene given natural or spatial-based language
       </li>
+
+      <li>
+        <strong>3D Object Localization</strong>: to predict a bounding box in a 3D scene corresponding to an object described in natural language
+      </li>      
     </ul>
 
     <div class="row" id="tasks">
       <div class="col-md-6">
-        <img src="static/img/site/localization.jpg" height="180px"/>
-        <p>3D Object Localization</p>
-      </div>
-      <div class="col-md-6">
         <img src="static/img/site/identification.png" height="180px"/>
         <p>Fine-grained 3D Object Identification</p>
       </div>
-    
+
+      <div class="col-md-6">
+        <img src="static/img/site/localization.jpg" height="180px"/>
+        <p>3D Object Localization</p>
+      </div>
       <!-- <div class="col-md-4">
         <p>&nbsp;</p>
       </div> -->
@@ -153,10 +154,9 @@
     </div>
 
     <p>
-      For each task, challenge participants are provided with prepared training, validation, and test datasets, and automated evaluation scripts. 
-      In addition to the public train-val-test split, benchmarking is done on a hidden test set whose raw data can be downloaded without annotations; 
-      in order to participate in the benchmark, the predictions on the hidden test set are uploaded to the evaluation server, where they are evaluated. 
-      Submission is restricted to submissions every two weeks to avoid finetuning on the test dataset. 
+      For each task the challenge participants are provided with prepared training, and test datasets, and automated evaluation scripts. The winner of each task will give a short talk describing their method during this workshop.
+      <!-- In addition to the public train-val-test split, benchmarking is done on a hidden test set whose raw data can be downloaded without annotations; 
+      in order to participate in the benchmark, the predictions on the hidden test set are uploaded to the evaluation server, where they are evaluated.        -->
     </p>
 
     <p>
@@ -164,10 +164,10 @@
     </p>
     <ul>
       <li>
-        <strong><b><a href="http://kaldir.vc.in.tum.de/scanrefer_benchmark/">ScanRefer Challenge</a></b></strong>
+        <strong><b><a href="https://referit3d.github.io/benchmark.html"> ReferIt3D Challenge</a></b></strong>
       </li>
       <li>
-        <strong>ReferIt3D Challenge</b></strong>
+        <strong><b><a href="http://kaldir.vc.in.tum.de/scanrefer_benchmark/">ScanRefer Challenge</a></b></strong>
       </li>
     </ul>
   </div>
@@ -211,7 +211,7 @@
 <p><br /></p>
 <div class="row" id="schedule">
   <div class="col-xs-12">
-    <h2>Schedule (in PDT)</h2>
+    <h2>Schedule (Pacific Time Zone)</h2>
   </div>
 </div>
 <div class="row">
